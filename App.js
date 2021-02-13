@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, ScrollView, FlatList } from 'react-native';
 
 export default function App() {
   // useState returns an array of two objects 
@@ -14,7 +14,7 @@ export default function App() {
     setEnteredGoal(enteredText);
   }
 
-  // console.log(typeof setCourseGoals);
+  // console.log(useState([]));
 
 
   const addGoalHandler = () => {
@@ -31,9 +31,7 @@ export default function App() {
         />
         <Button title="Add" onPress={addGoalHandler} />
       </View>
-      <View>
-        {courseGoals.map((goal) => <View style={styles.task} key={goal} ><Text style={styles.textWhite}>{goal}</Text></View>)}
-      </View>
+      
     </View>
 
   );
